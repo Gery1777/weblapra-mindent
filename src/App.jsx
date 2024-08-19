@@ -9,8 +9,8 @@ import Services from "./components/Services";
 
 //Import css files
 import "./App.css";
-import "./src/style/Components.css";
-import "./src/style/NavBar.css";
+import "./style/Components";
+import "./style/NavBar";
 
 function App() {
   const [currentSection, setCurrentSection] = useState("home");
