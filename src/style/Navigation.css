@@ -3,11 +3,7 @@
     --bc-navbar-secondary: #ffffff;
     --bc-navbar-shadow: rgb(126,212,245, 50%) bg-secondary  
   }
-  /*NavBar.tsx*/
-  .bg-light-nav {
-      background: var(--bc-navbar-primary);
-      /* background-image: linear-gradient(to right,  var(--bc-navbar-primary) ,var( --bc-navbar-secondary)) */
-    }
+  /*NavBar.tsx*/ 
   .navbar{
     transition: transform 0.1s ease-in-out;
     padding:0;

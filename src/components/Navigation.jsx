@@ -7,28 +7,12 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../images/logo.png";
 
 function Navigation() {
-  const [navbar, setNavbar] = useState(true);
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (PrevYPosition != scrollY) {
-        PrevYPosition = CurrentYPosition;
-      }
-      CurrentYPosition = scrollY;
-      setNavbar(PrevYPosition >= CurrentYPosition); // Adjust the threshold as needed
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
-
   return (
     <Navbar
       bg="light-nav"
       //   data-bs-theme="light"
       fixed="top"
-      // className={`bg-primary navbar ${navbar ? "show" : "hide"}`}
+      className={"bg-primary navbar"}
       id="navbar"
       collapseOnSelect
       expand="md"
@@ -39,13 +23,21 @@ function Navigation() {
             src={logo}
             style={{
               maxHeight: "40px",
-            }} // Adjust maxHeight as needed
+            }}
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="navigation">
+          <Nav
+            className="navigation"
+            style={{
+              gap: 50,
+              // width: "100%",
+              // justifyContent: "space-around",
+              // alignItems: "center",
+            }}
+          >
             <Nav.Link href="#about">Rólunk</Nav.Link>
             <Nav.Link href="#services">Kínálatunk</Nav.Link>
             <Nav.Link href="#works">Munkáink</Nav.Link>

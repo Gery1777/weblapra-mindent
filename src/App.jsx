@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, act } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -6,6 +6,8 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import Services from "./components/Services";
+import Works from "./components/Works";
+import Contact from "./components/Contact";
 
 //Import css files
 import "./App.css";
@@ -17,9 +19,10 @@ function App() {
   const sectionRefs = useRef({});
   useEffect(() => {
     const handleScroll = () => {
-      const navbarHeight = document.getElementById("navbar").clientHeight;
+      const navbar = document.getElementById("navbar");
+      const navbarHeight = navbar.clientHeight;
       const scrollY = window.scrollY;
-      const sections = document.querySelectorAll("section");
+      const sections = document.querySelectorAll("header, section, footer");
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - navbarHeight;
         const sectionBottom = sectionTop + section.clientHeight;
@@ -31,18 +34,39 @@ function App() {
         if (scrollY >= sectionTop && scrollY <= sectionBottom) {
           setCurrentSection(sectionId);
           // Find the element with matching data-rr-ui-event-key
-          const activeSection = document.querySelector(
+          const activeSection = document.getElementById(sectionId);
+          const activeNavbarSection = document.querySelector(
             `[data-rr-ui-event-key="#${sectionId}"]`
           );
           if (activeSection) {
             // Update the element (replace with your desired logic)
-            activeSection.classList.add("active"); // Example: Add an "active" class
+            activeSection?.classList.add("active");
+            activeNavbarSection?.classList.add("active");
+            if (
+              scrollY <= section.offsetTop + navbarHeight &&
+              scrollY >= section.offsetTop - navbarHeight
+            ) {
+              navbar.classList.add("bg-transparent");
+              navbar.classList.remove("bg-secondary");
+              navbar.classList.remove("bg-primary");
+            } else {
+              navbar.classList.remove("bg-transparent");
+              if (section.classList.contains("bg-secondary")) {
+                navbar.classList.add("bg-secondary");
+                navbar.classList.remove("bg-primary");
+              } else {
+                navbar.classList.add("bg-primary");
+                navbar.classList.remove("bg-secondary");
+              }
+            }
           }
         } else {
-          const inActiveSection = document.querySelector(
+          const inActiveSection = document.getElementById(sectionId);
+          const inActiveNavbarSection = document.querySelector(
             `[data-rr-ui-event-key="#${sectionId}"]`
           );
           inActiveSection?.classList.remove("active");
+          inActiveNavbarSection?.classList.remove("active");
         }
       });
     };
@@ -53,10 +77,13 @@ function App() {
   }, [currentSection]);
   return (
     <>
+      <div id="opacityContainer" className=""></div>
       <Navigation></Navigation>
       <Hero></Hero>
       <About></About>
       <Services></Services>
+      <Works></Works>
+      <Contact></Contact>
     </>
   );
 }
