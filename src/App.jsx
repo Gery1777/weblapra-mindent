@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect, useRef } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+import About from "./components/About";
+import Hero from "./components/Hero";
+import NavBar from "./components/Navbar";
+import Services from "./components/Services";
+
+//Import css files
+import "./App.css";
+import "./style/Components.css";
+import "./style/NavBar.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [currentSection, setCurrentSection] = useState("home");
+  const sectionRefs = useRef({});
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbarHeight = document.getElementById("navbar").clientHeight;
+      const scrollY = window.scrollY;
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - navbarHeight;
+        const sectionBottom = sectionTop + section.clientHeight;
+        const sectionId = section.id;
+        // Add visited class to section when it reaches more than 20% of the way of the height
+        if (scrollY >= sectionTop - window.innerHeight * 0.8) {
+          section.classList.add("visited");
+        }
+        if (scrollY >= sectionTop && scrollY <= sectionBottom) {
+          setCurrentSection(sectionId);
+          // Find the element with matching data-rr-ui-event-key
+          const activeSection = document.querySelector(
+            `[data-rr-ui-event-key="#${sectionId}"]`
+          );
+          if (activeSection) {
+            // Update the element (replace with your desired logic)
+            activeSection.classList.add("active"); // Example: Add an "active" class
+          }
+        } else {
+          const inActiveSection = document.querySelector(
+            `[data-rr-ui-event-key="#${sectionId}"]`
+          );
+          inActiveSection?.classList.remove("active");
+        }
+      });
+    };
+    // add initial load in case multiple sections are already visible onload
+    window.addEventListener("load", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [currentSection]);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar></NavBar>
+      <Hero></Hero>
+      <About></About>
+      <Services></Services>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

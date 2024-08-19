@@ -1,0 +1,66 @@
+.opacity-container{
+    position: fixed;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+  /* sections */
+  section{
+    opacity: 0;
+    transform: translateY(20px); /* Adjust as needed */
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+  }
+  section.visited{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Header.tsx */
+  .bg-primary{
+    background: var(--bc-navbar-primary) !important;
+    /* background: linear-gradient(to bottom left, var(--bc-navbar-primary)0%, var(--bc-navbar-secondary) 100%); */
+  }
+  .bg-secondary{
+    background: var(--bc-navbar-secondary) !important;
+    /* background: linear-gradient(to bottom left, var(--bc-navbar-secondary)0%, var(--bc-navbar-primary) 100%); */
+  }
+  header.hero {
+      position: relative;
+      /* background: url("../images/hero-bg.jpg" ) no-repeat center center ; */
+      background-size: cover;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    header.hero h1, header.hero .h1 {
+      font-size: 4rem;
+    }
+    @media (min-width: 768px) {
+      header.hero {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+      header.hero h1, header.hero .h1 {
+        font-size: 5rem;
+      }
+    }
+    
+  /* About.tsx */
+  .about {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+  }
+  .about .about-item {
+      max-width: 20rem;
+  }
+  .services{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .services .table tr td .fa-square-check{
+    color:green !important
+  }
+  .services .table tr td .fa-square-xmark{
+    color:red !important
+  }

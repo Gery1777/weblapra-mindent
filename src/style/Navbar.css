@@ -1,0 +1,29 @@
+:root{
+    --bc-navbar-primary: #efefef;/* --bc-navbar-primary: rgb(126,212,245) ; */
+    --bc-navbar-secondary: #ffffff;
+    --bc-navbar-shadow: rgb(126,212,245, 50%) bg-secondary  
+  }
+  /*NavBar.tsx*/
+  .bg-light-nav {
+      background: var(--bc-navbar-primary);
+      /* background-image: linear-gradient(to right,  var(--bc-navbar-primary) ,var( --bc-navbar-secondary)) */
+    }
+  .navbar{
+    transition: transform 0.1s ease-in-out;
+    padding:0;
+    box-shadow:  0px 2px 10px  var(--bc-navbar-shadow) ;
+  }
+    .navbar:hover{
+      transform: translateY(0);
+    }
+    .navbar.show {
+      transform: translateY(0);
+    } 
+  .navbar .container{
+    width:100%;
+    margin: 0;
+  }
+  .navigation{
+    font-size: x-large;
+    font-weight: normal;
+  }
