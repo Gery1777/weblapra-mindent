@@ -4,7 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import About from "./components/About";
 import Hero from "./components/Hero";
-import NavBar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import Services from "./components/Services";
 
 //Import css files
