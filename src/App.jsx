@@ -4,7 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import About from "./components/About.jsx";
 import Hero from "./components/Hero.jsx";
-import NavBar from "./components/NavBar.jsx";
+// import NavBar from "./components/NavBar.jsx";
 import Services from "./components/Services.jsx";
 
 //Import css files
@@ -53,7 +53,7 @@ function App() {
   }, [currentSection]);
   return (
     <>
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
       <Hero></Hero>
       <About></About>
       <Services></Services>
