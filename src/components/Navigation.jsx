@@ -6,7 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import logo from "../images/logo.png";
 
-function NavBar() {
+function Navigation() {
   const [navbar, setNavbar] = useState(true);
   useEffect(() => {
     const handleScroll = () => {
@@ -57,4 +57,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Navigation;

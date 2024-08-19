@@ -4,13 +4,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import About from "./components/About";
 import Hero from "./components/Hero";
-// import NavBar from "./components/NavBar.jsx";
+import Navigation from "./components/Navigation";
 import Services from "./components/Services";
 
 //Import css files
 import "./App.css";
 import "./style/Components.css";
-// import "./style/NavBar.css";
+import "./style/Navigation.css";
 
 function App() {
   const [currentSection, setCurrentSection] = useState("home");
@@ -53,7 +53,7 @@ function App() {
   }, [currentSection]);
   return (
     <>
-      {/* <NavBar></NavBar> */}
+      <Navigation></Navigation>
       <Hero></Hero>
       <About></About>
       <Services></Services>
