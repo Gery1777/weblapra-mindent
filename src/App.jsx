@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import About from "./components/About.jsx";
-import Hero from "./components/Hero.jsx";
+import About from "./components/About";
+import Hero from "./components/Hero";
 // import NavBar from "./components/NavBar.jsx";
-import Services from "./components/Services.jsx";
+import Services from "./components/Services";
 
 //Import css files
 import "./App.css";
-// import "./style/Components.css";
+import "./style/Components.css";
 // import "./style/NavBar.css";
 
 function App() {
