@@ -9,7 +9,7 @@ import Services from "./components/Services";
 
 //Import css files
 import "./App.css";
-import "./style/Components.css";
+// import "./style/Components.css";
 // import "./style/NavBar.css";
 
 function App() {
