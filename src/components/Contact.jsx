@@ -100,9 +100,7 @@ function Contact() {
         <div className="container position-relative">
           <div className="row justify-content-center">
             <div className="col-xl-10">
-              <h2 className="mb-5">
-                Use the form below to get in touch with me!
-              </h2>
+              <h2 className="mb-5">Írj nekünk</h2>
               <form
                 id="contact_form"
                 name="contact_form"
@@ -166,9 +164,11 @@ function Contact() {
                     name="message"
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary px-4 btn-lg">
-                  Küldés
-                </button>
+                <div className="mt-2">
+                  <button type="submit" className="btn btn-primary px-4 btn-lg">
+                    Küldés
+                  </button>
+                </div>
               </form>
             </div>
           </div>

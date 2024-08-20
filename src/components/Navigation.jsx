@@ -4,15 +4,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-import logo from "../images/logo.png";
+import logo from "/images/logo.png";
 
 function Navigation() {
   return (
     <Navbar
-      bg="light-nav"
-      //   data-bs-theme="light"
       fixed="top"
-      className={"bg-primary navbar"}
+      className="bg-primary navbar"
       id="navbar"
       collapseOnSelect
       expand="md"
@@ -32,7 +30,7 @@ function Navigation() {
           <Nav
             className="navigation"
             style={{
-              gap: 50,
+              gap: 10,
               // width: "100%",
               // justifyContent: "space-around",
               // alignItems: "center",
@@ -40,7 +38,7 @@ function Navigation() {
           >
             <Nav.Link href="#about">Rólunk</Nav.Link>
             <Nav.Link href="#services">Kínálatunk</Nav.Link>
-            <Nav.Link href="#works">Munkáink</Nav.Link>
+            <Nav.Link href="#showcase">Munkáink</Nav.Link>
             <Nav.Link href="#contact">Kapcsolat</Nav.Link>
           </Nav>
         </Navbar.Collapse>

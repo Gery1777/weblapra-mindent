@@ -1,0 +1,51 @@
+{
+  "showcase": [
+    {
+      "img": "./images/showcase1.jpg",
+      "name": "Beauty by Bujdos Vivi",
+      "URL": "https://gery1777.github.io/beauty-by-bujdos-vivi/",
+      "hashTags": ["#divat", "#beauty", "#hair", "#nail", "#saloon"]
+    },
+    {
+      "img": "./images/hero-bg.jpg",
+      "name": "Google",
+      "URL": "https://google.com",
+      "hashTags": [
+        "#searchengine",
+        "#search",
+        "#social",
+        "#alphabet",
+        "#international"
+      ]
+    },
+    {
+      "img": "./images/logo.png",
+      "name": "Világgazdaság",
+      "URL": "https://vg.hu",
+      "hashTags": ["#news", "#information", "#hungarian", "#data"]
+    }
+  ],
+  "servicesTypes": ["", "Alap", "Profi", "Prémium"],
+  "services": [
+    {
+      "feature": "Egyéni tartalom",
+      "isIncluded": [true, true, true]
+    },
+    {
+      "feature": "Design sablon alapján",
+      "isIncluded": [true, true, true]
+    },
+    {
+      "feature": "Egyedi design",
+      "isIncluded": [false, true, true]
+    },
+    {
+      "feature": "24/7 hibaelhárítás",
+      "isIncluded": [false, true, true]
+    },
+    {
+      "feature": "Weblap üzemeltetés",
+      "isIncluded": [false, false, true]
+    }
+  ]
+}

@@ -6,8 +6,9 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import Services from "./components/Services";
-import Works from "./components/Works";
+import Showcase from "./components/Showcase";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 //Import css files
 import "./App.css";
@@ -82,8 +83,9 @@ function App() {
       <Hero></Hero>
       <About></About>
       <Services></Services>
-      <Works></Works>
+      <Showcase></Showcase>
       <Contact></Contact>
+      <Footer></Footer>
     </>
   );
 }

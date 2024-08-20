@@ -1,6 +1,6 @@
 import React from "react";
 
-import profilePicture from "../images/profilePicture.jpg";
+import profilePicture from "/images/profilePicture.jpg";
 function About() {
   return (
     <>

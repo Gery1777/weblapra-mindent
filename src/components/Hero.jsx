@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../images/hero-icon.png";
+import hero from "/images/hero-icon.png";
 
 function Hero() {
   return (
@@ -16,18 +16,6 @@ function Hero() {
                     Személyre szabott online jelenlét pillanatok alatt
                   </h1>
                   <div className="hstack col-4 justify-content-left">
-                    {/* <a href="#about">
-                      <button className="btn btn-warning">
-                        Rólunk
-                        <span>
-                          <FontAwesomeIcon
-                            className="fa-sm"
-                            icon={faArrowDown}
-                            style={{ marginLeft: "6px" }}
-                          ></FontAwesomeIcon>
-                        </span>
-                      </button>
-                    </a> */}
                     <a href="#contact">
                       <button className="btn btn-primary">Írj nekünk</button>
                     </a>

@@ -1,33 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
+import data from "../data.json";
 import {
   faCheckSquare,
   faXmarkSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const ServicesTypeData = ["", "Alap", "Profi", "Prémium"];
-const ServicesData = [
-  {
-    feature: "Egyéni tartalom",
-    isIncluded: [true, true, true],
-  },
-  {
-    feature: "Design sablon alapján",
-    isIncluded: [true, true, true],
-  },
-  {
-    feature: "Egyedi design",
-    isIncluded: [false, true, true],
-  },
-  {
-    feature: "24/7 hibaelhárítás",
-    isIncluded: [false, true, true],
-  },
-  {
-    feature: "Weblap üzemeltetés",
-    isIncluded: [false, false, true],
-  },
-];
 
 function Services() {
   return (
@@ -36,14 +13,20 @@ function Services() {
         <div class="container">
           <div class="row mb-3 text-center justify-content-around">
             <h1>Csomagjaink</h1>
-            <div class="table-responsive-lg card mt-4 mb-4 box-shadow">
+            <p>
+              A neked megfelelő csomag alapján tudjuk elkezdeni a közös munkát
+              <br />
+              Keress fel minket, ha szeretnél segítséget, melyik lenne számodra
+              a legmegfelelőbb
+            </p>
+            <div class="services-table table-responsive-lg card mt-4 mb-4 col-12">
               <table class="table">
                 <thead>
                   <tr>
-                    {ServicesTypeData.map((type) => (
+                    {data.servicesTypes.map((type) => (
                       <th
                         scope="col"
-                        style={{ width: type === "" ? "41%" : "20%" }}
+                        style={{ width: type === "" ? "40%" : "20%" }}
                       >
                         {type}
                       </th>
@@ -51,7 +34,7 @@ function Services() {
                   </tr>
                 </thead>
                 <tbody>
-                  {ServicesData.map((row, index) => (
+                  {data.services.map((row, index) => (
                     <tr>
                       <th scope="row">{row.feature}</th>
                       {row.isIncluded.map((isInlcuded) => (
