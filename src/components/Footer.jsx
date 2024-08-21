@@ -29,7 +29,7 @@ function Footer() {
                 </li>
               </ul>
               <p className="text-muted small mb-4 mb-lg-0">
-                &copy; Your Website 2023. All Rights Reserved.
+                &copy; Weblapra Mindent 2023. Minden jog fenntartva.
               </p>
             </div>
             <div className="col-lg-6 h-100 text-center text-lg-end my-auto">

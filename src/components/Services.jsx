@@ -14,7 +14,7 @@ function Services() {
           <div class="row mb-3 text-center justify-content-around">
             <h1>Csomagjaink</h1>
             <p>
-              A neked megfelelő csomag alapján tudjuk elkezdeni a közös munkát
+              A neked megfelelő csomag alapján tudjuk elkezdeni a közös munkát*
               <br />
               Keress fel minket, ha szeretnél segítséget, melyik lenne számodra
               a legmegfelelőbb
@@ -52,6 +52,10 @@ function Services() {
               </table>
             </div>
           </div>
+          <p className="small">
+            *Csomagjaink tájékoztató jellegűek. Részletes tartalmakért kérlek
+            keress fel minket.
+          </p>
         </div>
       </section>
     </>

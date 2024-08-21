@@ -1,42 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import data from "../data.json";
 
-import bgShowcase1 from "/images/showcase1.jpg";
-import bgShowcase2 from "/images/hero-bg.jpg";
-import bgShowcase3 from "/images/logo.png";
-
-const ShowCaseContentData = [
-  {
-    img: bgShowcase1,
-    name: "Beauty by Bujdos Vivi",
-    URL: "https://gery1777.github.io/beauty-by-bujdos-vivi/",
-    hashTags: ["#divat", "#beauty", "#hair", "#nail", "#saloon"],
-  },
-  {
-    img: bgShowcase2,
-    name: "Facebook",
-    URL: "https://gery1777.github.io/beauty-by-bujdos-vivi/",
-    hashTags: ["#divat", "#beauty", "#hair", "#nail", "#saloon"],
-  },
-  {
-    img: bgShowcase3,
-    name: "Instagram",
-    URL: "https://gery1777.github.io/beauty-by-bujdos-vivi/",
-    hashTags: ["#divat", "#beauty", "#hair", "#nail", "#saloon"],
-  },
-];
-
 function Showcase() {
   return (
     <>
       <section className="showcase bg-secondary text-left" id="showcase">
-        <h1>Korábbi munkáink</h1>
-        <p>
-          Nézz körbe, korábban elkészített weblapjaink között
-          <br />
-          Szerezz inspirációt és nézd meg másoknak, milyen megjelenést
-          választottak
-        </p>
+        <div className="container mb-4">
+          <h1>Korábbi munkáink</h1>
+          <p>
+            Nézz körbe, korábban elkészített weblapjaink között
+            <br />
+            Szerezz inspirációt és nézd meg mások, milyen megjelenést
+            választottak
+          </p>
+        </div>
         {/* <div className="showcase-item-container row justify-content-around"> */}
         <div className="showcase-item-container">
           {data.showcase.map((item, index) => (

@@ -100,7 +100,12 @@ function Contact() {
         <div className="container position-relative">
           <div className="row justify-content-center">
             <div className="col-xl-10">
-              <h2 className="mb-5">Írj nekünk</h2>
+              <h2>Írj nekünk</h2>
+              <p className="mb-5">
+                Ha szeretnéd vállalkozásod elérhetőségét a következő szintre
+                emelni, akkor írd meg nekünk elképzeléseidet és mi felvesszük
+                veled a kapcsolatot
+              </p>
               <form
                 id="contact_form"
                 name="contact_form"

@@ -10,16 +10,14 @@ function Hero() {
             <div className="col-xl-12">
               <div className="text-left hstack">
                 <div>
-                  <b style={{ color: "blue" }}>WEBLAPRA MINDENT</b>
+                  {/* <b style={{ color: "blue" }}>WEBLAPRA MINDENT</b> */}
                   {/* <!-- Page heading--> */}
                   <h1 className="mb-5">
-                    Személyre szabott online jelenlét pillanatok alatt
+                    Személyre szabott online jelenlét mindenkinek
                   </h1>
-                  <div className="hstack col-4 justify-content-left">
-                    <a href="#contact">
-                      <button className="btn btn-primary">Írj nekünk</button>
-                    </a>
-                  </div>
+                  <a href="#contact">
+                    <button className="btn btn-primary">Írj nekünk</button>
+                  </a>
                 </div>
                 <img src={hero} style={{ width: "25%", height: "25%" }}></img>
               </div>

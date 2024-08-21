@@ -31,9 +31,6 @@ function Navigation() {
             className="navigation"
             style={{
               gap: 10,
-              // width: "100%",
-              // justifyContent: "space-around",
-              // alignItems: "center",
             }}
           >
             <Nav.Link href="#about">Rólunk</Nav.Link>
